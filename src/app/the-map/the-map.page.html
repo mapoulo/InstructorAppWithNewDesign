@@ -1,36 +1,47 @@
 <ion-content>
 
-  <div #map id="map" (click)="showTab()"></div>
-
-
-  <div #list [ngClass]="{'list': display, 'listinactive': !display}">
-    <div (click)="swipeUp()" class="toggler">
-      <ion-icon *ngIf="display" color="light" class="arrow" name="arrow-dropdown"></ion-icon>
-      <ion-icon *ngIf="!display" class="arrow" name="arrow-dropup"></ion-icon>
-    </div>
-    <div class="s-list">
-      <div class="card" *ngFor="let data of NewRequesteWithPictures; let i = index">
-        <div class="image">
-
-          <img *ngIf="!data.image"
-            src="https://icon-library.net/images/image-placeholder-icon/image-placeholder-icon-3.jpg" alt="">
-
-          <img src="{{data.image}}" alt="No image">
-
-        </div>
-        <div class="details">
-          <p style="color: white">Date In: {{data.datein}}</p>
-          <p style="color: white">Date Out: {{data.dateout}}</p>
-        </div>
-
-
-        <div class="call">
-          <button expand="full" (click)="Decline(data, data.docid, i)">Decline</button>
-        </div>
-        <div class="request">
-          <button expand="full" (click)="Accept(data, i, data.docid)">Accept</button>
+    <div #map id="map" (click)="showTab()"></div>
+    
+    <div #list [ngClass]="{'list': display, 'listinactive': !display}">
+      <div (click)="swipeUp()" class="toggler">
+        <ion-icon *ngIf="display" color="dark" class="arrow" name="arrow-dropdown"></ion-icon>
+        <ion-icon *ngIf="!display" class="arrow" name="arrow-dropup"></ion-icon>
+        <p *ngIf="!display" color="dark">REQUESTS</p>
+      </div>
+      <div class="s-list" padding>
+  
+        <div class="card">
+  
+          <div class="image">
+            <img src="../../assets/Samuel_L._Jackson.jpg" alt="No Image">
+          </div>
+          <div class="details">
+            <div class="det">
+              <p style="font-size: 4vw;font-weight: bold">Samuel L Jackson</p>
+              <p style="font-size: 3vw">Dippenaar St, Diepkloof Zone, Johannesburg</p>
+              <p style="font-size: 3vw">Contacts</p>
+              <p style="font-size: 2.5vw">015 325 256</p>
+              
+              <div class="butons">
+  
+  
+              <div class="btns">
+                <button class="bt1">
+                  Accept
+                </button>
+              </div>
+              <div class="btns2">
+                <button class="bt2">
+                  Decline
+                </button>
+              </div>
+            </div>
+            </div>
+          </div>
+  
         </div>
       </div>
     </div>
-  </div>
-</ion-content>
+  </ion-content>
+
+
