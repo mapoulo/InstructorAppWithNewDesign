@@ -1,0 +1,53 @@
+<ion-content >
+<div class="no-scroll">
+<div class="logo">
+  <img src="../../assets/blacklogo.svg" alt="">
+</div>
+<div class="container">
+  <div class="form">
+    <h1>SIGN UP</h1>
+    <div>
+      <form [formGroup]="signupForm" class="login">
+        <div class="input">
+          <p>Email</p>
+          <input formControlName="email" type="email" 
+          [class.invalid]="!signupForm.controls['email'].valid && signupForm.controls['email'].touched">
+        </div>
+        <div *ngIf="!signupForm.controls['email'].valid
+        && signupForm.controls['email'].touched" class="error">
+          <div class="messages">
+            Please enter a valid email.
+          </div>
+        </div>
+        <div class="input">
+          <p>Password</p>
+          <input formControlName="password" type="email" type="password" 
+          [class.invalid]="!signupForm.controls['password'].valid && signupForm.controls['password'].touched">
+        </div>
+        <div *ngIf="!signupForm.controls['password'].valid  &&
+        signupForm.controls['password'].touched" class="error">
+          <div class="messages">
+            Password needs more than 6 characters long.
+          </div>
+        </div>
+        <div class="forgot">
+          <button>New User!</button>
+        </div>
+        <div class="create">
+          <button (click)="goToLogin()">Already have and account?</button>
+        </div>
+        <br>
+        <div class="button">
+          <button (click)="signupUser(signupForm)" 
+          [disabled]="!signupForm.valid">Register
+        </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div> 
+<ion-footer no-border>
+    <img  src="../../assets/MaskFooter.svg" alt="">
+</ion-footer>
+</div>
+</ion-content>

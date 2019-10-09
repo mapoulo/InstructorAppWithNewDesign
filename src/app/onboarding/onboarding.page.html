@@ -1,0 +1,97 @@
+
+<ion-content>
+  <ion-slides pager #mySlider>
+    <ion-slide >
+     <div class="container">
+       <div class="welc">
+        <h1>
+          Welcome to
+        </h1>
+       </div>
+       <div class="logo">
+        <img src="../../assets/blacklogo.svg" alt="">
+       </div>
+       <div padding class="screens">
+        <h4>
+          The Following Screens will help you familiarise yourself with the application.
+        </h4>
+       </div>
+       <div class="btn">
+         <ion-button (click)="swipeNext()" expand="block">Get Started</ion-button>
+       </div>
+     </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="container">
+        <div class="welc">
+          <h2>
+            Be one with the Pros!
+          </h2>
+        </div>
+        <div class="logo">
+          <img src="../../assets/textbubbles.svg" alt="">
+        </div>
+        <div padding class="screens">
+          <h4 style="color: black">
+            You will be listed in the app as a pro instructor along with your driving school.
+          </h4>
+        </div>
+        <div class="btn">
+          <ion-button (click)="swipeNext()" expand="block">Next</ion-button>
+        </div>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="container">
+        <div class="welc">
+          <h1 style="color: black">
+            Customer Tracking
+          </h1>
+        </div>
+        <div class="logo">
+          <img src="../../assets/checklist.svg" alt="Logo">
+        </div>
+        <div padding class="screens">
+          <h5>
+            All your requets will be listed in the map tab.
+            After accepting, you will see the deadline of your requet
+            and location of the person in the booking tab.
+          </h5>
+        </div>
+        <div class="btn">
+          <ion-button (click)="swipeNext()" expand="block">Next</ion-button>
+        </div>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="container">
+        <div class="welc">
+          <h1>
+            Analytics
+          </h1>
+        </div>
+        <div class="logo">
+          <img src="../../assets/analytics.svg" alt="">
+        </div>
+        <div padding class="screens">
+          <h5>
+            The app tells you the frequency of your bookings
+            at specific timeframes. you can view them in analytics tab
+          </h5>
+          <h6>
+            That's it!, please enjoy the app.
+          </h6>
+        </div>
+        <div class="btns">
+          <ion-button (click)="goToLogin()" expand="block">Login</ion-button>
+          <ion-button (click)="goToRegister()" color="light" expand="block">Signup</ion-button>
+        </div>
+
+      </div>
+    </ion-slide>
+    
+  </ion-slides>
+</ion-content>

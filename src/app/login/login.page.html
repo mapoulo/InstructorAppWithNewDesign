@@ -1,0 +1,73 @@
+<ion-content >
+  <div class="no-scroll">
+ 
+ 
+   <div class="logo">
+     <img src="../../assets/blacklogo.svg" alt="">
+   </div>
+   <div class="container">
+     
+     <div class="form">
+       <h1>SIGN IN</h1>
+       <div>
+         <form ng-submit="loginForm()"  [formGroup]= "loginForm" class="login" #form="ngForm">
+           <div class="input">
+             <p>Email</p>
+             <input type="email" formControlName="email" [class.invalid]="!loginForm.controls['email'].valid &&
+             loginForm.controls['email'].touched" (keyup.enter)="submit()">
+           </div>
+           <div class="error" *ngIf="!loginForm.controls['email'].valid &&
+           loginForm.controls['email'].touched">
+             <div class="messages">
+               Please enter a valid email address.
+             </div>
+           </div>
+ 
+        
+ 
+ 
+           <div class="input">
+             <p>Password</p>
+             <input   type="email" type="password" formControlName="password"
+             [class.invalid]="!loginForm.controls['password'].valid&& loginForm.controls['password'].touched" (keyup.enter)="submit()" (keyup.enter)="handleLogin()">
+           </div>
+           <div *ngIf="!loginForm.controls['password'].valid
+           && loginForm.controls['password'].touched" class="error">
+             <div class="messages">
+               Your password is incorrect.
+             </div>
+           </div>
+ 
+ 
+ 
+           <button  type="submit"  (click)="loginUser(loginForm)" 
+         
+           [disabled]="!loginForm.valid" class="thato"></button>
+ 
+ 
+           <div class="forgot">
+             <button  (click)="forgetpassword()">Forgot Password?</button>
+           </div>
+           <div class="create">
+             <button (click)="goToRegister()">Create Account</button>
+           </div>
+           <br>
+           <div class="button">
+               <button  type="submit"  (click)="loginUser(loginForm)" 
+               expand="block" 
+               [disabled]="!loginForm.valid">Login</button>
+           </div>
+           
+         </form>
+       </div>
+     </div>
+     
+   </div>
+  
+   <ion-footer no-border>
+     
+   </ion-footer>
+ 
+ </div>
+ </ion-content>
+ 

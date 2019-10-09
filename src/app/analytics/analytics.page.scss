@@ -1,0 +1,201 @@
+
+ .viewImage {
+    transform: scale(1);
+    transition: 0.4s;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    display: grid;
+    text-align: center;
+    align-content: center;
+    background: rgba(0, 0, 0, 0.692);
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: white;
+      width: 40px;
+      height: 40px;
+      display: grid;
+      border-radius: 100px;
+      align-content: center;
+      p {
+        font-size: 13px;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    img {
+      margin: auto;
+      width: 90%;
+      border-radius: 10px;
+    }
+  }
+  .viewImage-inactive {
+      transform: scale(0);
+    transition: 0.4s;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    display: grid;
+    text-align: center;
+    align-content: center;
+    background: rgba(0, 0, 0, 0.692);
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: white;
+      width: 40px;
+      height: 40px;
+      display: grid;
+      border-radius: 100px;
+      align-content: center;
+      p {
+        font-size: 13px;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    img {
+      margin: auto;
+      width: 90%;
+      border-radius: 10px;
+    }
+  }
+
+
+.no-scroll .scroll-content{
+    overflow: hidden;
+    height: 100%;
+ }
+ .no-scroll {
+    
+ }
+.container{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#4C0A0A, #790B0B);
+    position: relative;
+    height: 20%;
+    justify-content: center;
+    padding: 0;
+    .dSchool {
+        display: flex;
+        flex-direction: row;
+        margin: 2px;
+        height: 100%;
+        .thumb {
+            flex: 1;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            ion-avatar{
+                height: 90px;
+                width: 90px;
+            }
+            img {
+                // border-radius: 50%;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .Dname {
+            flex: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            
+            .name{
+                height: 65%;
+                display: flex;
+                align-items: center;
+                position: relative;
+                padding: 0;
+                p {
+                    font-size: 20px;
+                    color: white;
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+            .todo{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 35%;
+                p {
+                    padding-right: 3px;
+                    a {
+                        font-size: 70%;
+                        font-weight: bold;
+                        color: white;
+                        padding-right: 3px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+.cards {
+    height: 70vh;
+    background: red;
+    overflow: hidden;
+    overflow-y: auto;
+    padding: 7px;
+    position: fixed;
+    width: 100%;
+    .date {
+        height: 10%;
+        h1 {
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+    .card{
+        display: flex;
+        height: 40%;
+        width: 100%;
+        align-content: center;
+        align-items: center;
+        border-radius: 15px;
+        // margin-bottom: 5px;
+        box-shadow: 3px 6px 16px rgba(73, 72, 72, 0.4);
+        background: rgb(245, 243, 243);
+        .bookings{
+            justify-content: center;
+            display: flex;
+            width: 100%;
+            height: 50%;
+            h3 {
+               
+            }
+        }
+    }
+}
+
+.graph {
+    height: 80%;
+    background:linear-gradient(rgba(255, 255, 255, 0.925)),url(../../assets/coverbg.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .welcome-card {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+
+}

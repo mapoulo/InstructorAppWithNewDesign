@@ -1,0 +1,7 @@
+{
+  "name": "StepDriveOwnerApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,51 @@
+<ion-content >
+
+<div class="container" (click)="showTab()">
+  <div class="title">
+      <h1>{{value}}</h1>
+  </div>
+  <div class="list">
+    <div class="profile" *ngFor="let data of SortedBookings; let i = index">
+      
+      <div class="image">
+     <div class="img">
+        <img  src="{{data.image}}" alt="Pic not found" *ngIf = "data.image">
+     </div>
+      </div>
+      <div class="details" >
+          <!-- <div class="takeme">
+              <button>
+                Take me here
+              </button>
+            </div> -->
+        <!-- <h4>Address: {{data.request.location.address}}</h4>
+        <h4>Datein: {{data.request.datein}}</h4>
+        <h4>Dateout: {{data.request.dateout}}</h4>
+        <h4>Amount: {{data.request.package.amount}}</h4>
+        <h4>name: {{data.request.package.name}}</h4>
+        <h4>number: {{data.request.package.number}}</h4> -->
+
+
+
+        <p>Address:   {{data.location}}</p><br />
+        <p>Date in:   {{data.datein}}</p><br />
+        <p>Time in:   {{data.time}}</p><br />
+        <p>PackageName:  {{data.packageName}}</p><br />
+        <p>Want a book?:  {{data.book}}</p>
+
+  <button (click)="DeleteItem(i)" class="DeleteButton">Delete</button>
+        <!-- <p id="package">Packge:<b>{{data.package.amount}}</b></p>
+        <p id="package"><b>{{data.package.number}}</b></p>
+        <p id="package"><b>{{data.package.name}}</b></p> -->
+        <!-- <p>DataIn: {{data.}}</p>
+        <p>DateOut:  {{data.datein}}</p>
+        <p>Lessons: {{data.dateout}}</p>
+        <p>Book Ordered: {{data.book}}</p>
+        <p>Confirm: {{data.confirmed}}</p> -->
+      </div>
+    </div>
+
+
+  </div>
+</div>
+</ion-content>

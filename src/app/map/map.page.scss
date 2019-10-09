@@ -1,0 +1,305 @@
+@keyframes slideInUp {
+      from {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+      }
+    
+      to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+@keyframes slideOutDown {
+      from {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    
+      to {
+        visibility: hidden;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+      }
+    }
+    * {
+          transition: 0.5s;
+          transition-timing-function:cubic-bezier(.41,-0.37,.62,1.32);
+    }
+.booking-active{
+      width: 100%;
+      height: 95%;
+      position: absolute;
+      bottom: 0;
+      background: rgba(76, 10, 10, 0.89);
+      z-index:3;
+      animation-name: slideInUp;
+      overflow: hidden;
+      .toggler{
+            width: 100%;
+            height: 20px;
+            text-align: center;
+            color: white;
+            padding: 2px 0px;
+            overflow: hidden;
+      }
+      .list{
+            opacity: 1;
+            width: 100%;
+            height: 96%;
+            overflow-y: auto;
+            // padding: 20px 0px;
+            .profile{
+                  width: 80%;
+                  margin: 20px auto;
+                  display: flex;
+                  background: white;
+                  position: relative;
+                  border-radius: 20px;
+                  box-shadow: 0px 0px 3px #1717179f;
+                  padding-left: 15vw;
+                  .image{
+                        position: absolute;
+                              width: 20vw;
+                              height: 100%;
+                              left: -6vw;
+                              top: 0;
+                              bottom: 0;
+                              display: grid;
+                              align-content: center;
+                        .img{
+                              width: 20vw;
+                              height: 20vw;
+                              background: rgb(255, 255, 255);
+                              display: grid;
+                              align-items: center;
+                              text-align: center;
+                              overflow: hidden;
+                              border-radius: 200px;
+                              box-shadow: 0px 0px 3px #1717179f;
+                              img{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                              }
+                        }
+                  }
+                  .details{
+                        padding: 5vw 0vw;
+                        h3{
+                              font-size: 4vw;
+                              margin: 0;
+                        }
+                        p {
+                              font-size: 3vw;
+                              margin: 0;
+                        }
+                        .data-active {
+                              display: grid;
+                              align-content: center;
+                              height: 100%;
+                              p{
+                                    margin: 5px 0px;
+                              }
+                        }
+                        .data-inactive {
+                              display: grid;
+                              align-content: center;
+                              height: 55%;
+                              p{
+                                    margin: 5px 0px;
+                              }
+                        }
+                        
+                        .more-active {
+                              display: flex;
+                              transform: scale(1);
+                              div {
+                                    display: grid;
+                                    align-content: center;
+                                    padding: 0px 5px;
+                              }
+                        }
+                        .more-inactive {
+                              display: flex;
+                              transform: scale(0);
+                              div {
+                                    display: grid;
+                                    align-content: center;
+                                    padding: 0px 5px;
+                              }
+                        }
+                  }
+                  .expand{
+                        position: absolute;
+                        width: 30px;
+                        height: 30px;
+                        right: 0;
+                        text-align: center;
+                        top: 25%;
+                        right: -15px;
+                        border-radius: 200px;
+                        background: white;
+                        box-shadow: 0px 0px 3px #1717179f;
+                        display: grid;
+                        padding-top: 3px;
+                        align-content: center;
+                        p{
+                              margin: 0;
+                              padding: 0;
+                        }
+                  }
+                  .buttons{
+                        position: absolute;
+                        bottom: -10px;
+                        left: 0;
+                        right: 0;
+                        text-align: right;
+                        padding: 0px 10px;
+                        button {
+                              padding:5px 10px;
+                              margin: 0px 5px;
+                              border-radius: 5px;
+                              width: 20vw;
+                              height: 4vw;
+                              font-size: 2vw;
+                        }
+                        #accept{
+                              padding: 10px;
+                              background: white;
+                              box-shadow: 0px 0px 3px #1717179f;
+                        }
+                        #decline{
+                              padding: 10px;
+                              background: #4C0A0A;
+                              box-shadow: 0px 0px 3px #1717179f;
+                              color: white;
+                        }
+                  }
+            }
+      }
+}
+
+.booking-inactive{
+      width: 100%;
+      height: 10%;
+      position: absolute;
+      bottom: 0;
+      background: rgba(76, 10, 10, 0.89);
+      z-index:3;
+      animation-name: slideOutDown;
+      .toggler{
+            width: 100%;
+            height: 20px;
+            text-align: center;
+            color: white;
+            padding: 2px 0px;
+      }
+      .list{
+            width: 100%;
+            height: 90%;
+            overflow-y: auto;
+            opacity: 0;
+            // padding: 20px 0px;
+            .profile{
+                  width: 80%;
+                  margin: 20px auto;
+                  display: flex;
+                  background: white;
+                  position: relative;
+                  border-radius: 20px;
+                  box-shadow: 0px 0px 3px #1717179f;
+                  padding-left: 15vw;
+                  .image{
+                        position: absolute;
+                              width: 20vw;
+                              height: 100%;
+                              left: -6vw;
+                              top: 0;
+                              bottom: 0;
+                              display: grid;
+                              align-content: center;
+                        .img{
+                              width: 20vw;
+                              height: 20vw;
+                              background: rgb(255, 255, 255);
+                              display: grid;
+                              align-items: center;
+                              text-align: center;
+                              overflow: hidden;
+                              border-radius: 200px;
+                              box-shadow: 0px 0px 3px #1717179f;
+                              img{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                              }
+                        }
+                  }
+                  .details{
+                        padding: 5vw 0vw;
+                        h3{
+                              font-size: 4vw;
+                              margin: 0;
+                        }
+                        p {
+                              font-size: 3vw;
+                              margin: 0;
+                        }
+                        
+                  }
+                  .expand{
+                        position: absolute;
+                        width: 30px;
+                        height: 30px;
+                        right: 0;
+                        text-align: center;
+                        top: 25%;
+                        right: -15px;
+                        border-radius: 200px;
+                        background: white;
+                        box-shadow: 0px 0px 3px #1717179f;
+                        display: grid;
+                        padding-top: 3px;
+                        align-content: center;
+                        p{
+                              margin: 0;
+                              padding: 0;
+                        }
+                  }
+                  .buttons{
+                        position: absolute;
+                        bottom: -10px;
+                        left: 0;
+                        right: 0;
+                        text-align: right;
+                        padding: 0px 10px;
+                        button {
+                              padding:5px 10px;
+                              margin: 0px 5px;
+                              border-radius: 5px;
+                              width: 20vw;
+                              height: 4vw;
+                              font-size: 2vw;
+                        }
+                        #accept{
+                              background: white;
+                              box-shadow: 0px 0px 3px #1717179f;
+                        }
+                        #decline{
+                              background: #4C0A0A;
+                              box-shadow: 0px 0px 3px #1717179f;
+                              color: white;
+                        }
+                  }
+            }
+      }
+}
+.map{
+      position: absolute;
+      left: 0%;
+      right: 0%;
+      bottom: 10%;
+      top: 0%;
+      z-index:2;
+}

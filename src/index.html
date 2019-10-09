@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Ionic App</title>
+
+  <base href="/" />
+
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+
+    <!-- including swiper -->
+    <link rel="stylesheet" href="./assets/swiper-master/dist/css/swiper.min.css">
+    <script src="./assets/swiper-master/dist/js/swiper.min.js"></script>
+  <!-- add to homescreen for ios -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+</head>
+
+<body>
+  <app-root></app-root>
+
+  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAT55USDnQ-tZLHJlzryDJbxseD8sLSdZE&libraries=places&language=en"></script>
+  <script src="cordova.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCORIMqIGQaVoM8wEW43YGH5b73-TDQ3k8",
+      authDomain: "step-drive-95bbe.firebaseapp.com",
+      databaseURL: "https://step-drive-95bbe.firebaseio.com",
+      projectId: "step-drive-95bbe",
+      storageBucket: "step-drive-95bbe.appspot.com",
+      messagingSenderId: "580007341136",
+      appId: "1:580007341136:web:21b330e7237fc0b3"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+<script  src="../../Jquery/prettify.js"></script>
+</body>
+
+</html>

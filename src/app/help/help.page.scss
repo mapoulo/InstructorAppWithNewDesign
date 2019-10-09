@@ -1,0 +1,36 @@
+ion-content {
+      background:linear-gradient(rgba(255, 255, 255, 0.925)),url(../../assets/coverbg.jpg);
+      height: 100%;
+      background-size: cover;
+}
+.header {
+      text-align: center;
+      padding: 10px;
+      img{
+            width: 40%;
+      }
+      p{
+            margin: 0;
+            padding: 0;
+      }
+}
+.contacts {
+      width: 90%;
+      overflow: hidden;
+      margin: 20px auto;
+      // display:  flex;
+      .number{
+            float: left;
+            p{
+                  margin: 0;
+                  padding: 0;
+            }
+      }
+      .link {
+            float: right;
+      }
+}
+.information {
+      width: 90%;
+      margin: auto;
+}

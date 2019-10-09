@@ -1,0 +1,59 @@
+<ion-content class="no-scroll">
+    <div class="container">
+      <div class="dSchool" *ngFor="let d of NewDrivingschool">
+        <!-- <div class="thumb">
+          <ion-avatar>
+            <img src="{{d.image}}">
+          </ion-avatar>
+        </div> -->
+        <div class="viewImage" [ngClass]="{'viewImage': viewImage.open, 'viewImage-inactive': !viewImage.open}">
+          <div (click)="openImage(d.image, 'close')" class="close"><p>x</p></div>
+          <img *ngIf="d.image" src="{{d.image}}" alt="">
+          <img *ngIf="!d.image"  src="https://firebasestorage.googleapis.com/v0/b/step-drive-95bbe.appspot.com/o/1.png?alt=media&token=c023a9e6-a7a0-4af9-bd13-9778f2bea46d" alt="">
+        </div> 
+
+      <div class="thumb">
+        <ion-avatar (click)="openImage(d.image, 'open')">
+          <img *ngIf="d.image" src="{{d.image}}" alt="" >
+          <img *ngIf="!d.image"  src="https://firebasestorage.googleapis.com/v0/b/step-drive-95bbe.appspot.com/o/1.png?alt=media&token=c023a9e6-a7a0-4af9-bd13-9778f2bea46d"alt="">
+          
+        </ion-avatar>
+      </div>
+        <div class="Dname">
+          <div class="name">
+            <p>
+              {{d.schoolname}}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="rev">
+      </div>
+    </div>
+  
+  
+      <div padding class="cards"  >
+          <p text-center *ngIf="reviews.length==0"><strong>No reviews yet</strong></p>
+        <div class="card" *ngFor="let item of reviews">
+          <div class="ava">
+            <ion-avatar slot="start">
+              <img src={{item.image}}>
+            </ion-avatar>
+          </div>
+
+          <div class="comments">
+            <ion-label>
+              <h1>{{item.username}}</h1>
+              <p>{{item.text}}</p>
+  
+              <ionic4-star-rating #rating activeIcon="ios-star" defaultIcon="ios-star-outline" activeColor="#FFD700"
+                defaultColor="#D3D3D3" readonly="true" rating="{{item.rating}}" fontSize="32px"
+                (ratingChanged)="logRatingChange($event)">
+              </ionic4-star-rating>
+            </ion-label>
+          </div>
+        </div>
+    </div>
+  
+  
+  </ion-content>

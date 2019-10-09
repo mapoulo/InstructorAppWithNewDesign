@@ -1,0 +1,17 @@
+ion-tab-bar {
+      --background: linear-gradient(#4C0A0A,#790B0B);
+      --border-radius: 8px;
+      --color: white;
+      ion-tab-button {
+            --background: linear-gradient(#4C0A0A,#790B0B);
+            --background-focused: #BA0B0B;
+            --color: #ffffff;
+            --color-selected: #ff9b9b;
+            --padding-bottom: 4px;
+            --padding-end: 4px;
+            --padding-start: 4px;
+            --padding-top: 4px;
+            --ripple-color: #1e1e1e;
+            --margin-bottom: solid 3px white;
+      }
+}

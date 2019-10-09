@@ -1,0 +1,45 @@
+<ion-content class="no-scroll"  (click)="showTab()">
+  <div class="container" (click)="showTab()">
+      <div class="dSchool" *ngFor = "let item of NewData">
+
+          <div class="viewImage" [ngClass]="{'viewImage': viewImage.open, 'viewImage-inactive': !viewImage.open}">
+              <div (click)="openImage(item.image, 'close')" class="close"><p>x</p></div>
+              <img *ngIf="item.image" src="{{item.image}}" alt="">
+              <img *ngIf="!item.image"  src="https://firebasestorage.googleapis.com/v0/b/step-drive-95bbe.appspot.com/o/1.png?alt=media&token=c023a9e6-a7a0-4af9-bd13-9778f2bea46d" alt="">
+            </div> 
+
+          <div class="thumb">
+            <ion-avatar (click)="openImage(item.image, 'open')">
+              <img *ngIf="item.image" src="{{item.image}}" alt="" >
+              <img *ngIf="!item.image"  src="https://firebasestorage.googleapis.com/v0/b/step-drive-95bbe.appspot.com/o/1.png?alt=media&token=c023a9e6-a7a0-4af9-bd13-9778f2bea46d" alt="">
+              
+            </ion-avatar>
+          </div>
+
+       
+
+          <div class="Dname">
+            <div class="name">
+              <p>
+                {{item.schoolname}}
+              </p>
+            </div>
+            <!-- <div class="todo">
+              <p text-end><a>Todo: 3 | Done: 57 | Declined: 34</a></p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    <div class="graph" (click)="showTab()">
+      <ion-card color="light" class="welcome-card">
+        <ion-card-header>
+          <ion-card-subtitle>Number of Students per week</ion-card-subtitle>
+          <!-- <ion-card-title>Name of instructor</ion-card-title> -->
+        </ion-card-header>
+        <ion-card-content>
+          <canvas #barChart></canvas>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+</ion-content>

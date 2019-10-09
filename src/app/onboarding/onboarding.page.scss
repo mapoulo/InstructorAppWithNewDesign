@@ -1,0 +1,75 @@
+ion-slides {
+    height: 100%;
+    width: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .welc{
+        text-align: center;
+        height: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            align-content: center;
+            font-size:40px;
+            font-weight: bold;
+            color: black;
+        }
+        h2 {
+            font-weight: bold;
+        }
+    }
+    .logo {
+        height: 30%;
+        text-align: center;
+        // border: 1px solid teal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            height: 70%;
+            widows: 70%;
+        }
+    }
+    .screens {
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        h4 {
+            align-content: center;
+            color: black;
+            text-align: center;
+        }
+    }
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20%;
+        ion-button {
+            height: 55px;
+            width: 70%;
+            justify-content: center;
+            --background: linear-gradient(#4C0A0A,#790B0B);
+        }
+    }
+    .btns {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 25%;
+        ion-button {
+            height: 40px;
+            width: 70%;
+            justify-content: center;
+            --background: linear-gradient(#4C0A0A,#790B0B);
+        }
+    }
+}

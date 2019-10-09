@@ -1,0 +1,252 @@
+<ion-content>
+  <div class="viewImage">
+      <div (click)="openImage('', 'close')" class="close"><p>x</p></div>
+      <img  *ngIf="viewImage.image" src="{{viewImage.image}}" alt="">
+      <img *ngIf="!viewImage.image" src="https://firebasestorage.googleapis.com/v0/b/step-drive-95bbe.appspot.com/o/1.png?alt=media&token=c023a9e6-a7a0-4af9-bd13-9778f2bea46d" alt="">
+
+      <ion-fab vertical="bottom" horizontal="end" (click)="selectImage()">
+
+
+      <ion-fab-button side="top" size="small">
+          <ion-icon name="create"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    </div>
+
+    <img (click)="selectImage()" *ngIf="viewImage.image" src="{{viewImage.image}}" alt="">
+    <img *ngIf="!viewImage.image"
+      src="https://firebasestorage.googleapis.com/v0/b/step-drive-95bbe.appspot.com/o/1.png?alt=media&token=c023a9e6-a7a0-4af9-bd13-9778f2bea46d"
+      alt="">
+  
+<div class="contain">
+    <div class="avatar-images">
+      <div (click)="goToRev()" class="rev">
+        <div class="stars">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon size="large" name="star-half"></ion-icon>
+          <ion-icon name="star-outline"></ion-icon>
+        </div>
+        <div class="views">
+          Reviews
+        </div>
+      </div>
+
+      <div (click)="Logout()" class="logt">
+        <ion-icon size="large" name="exit"></ion-icon>
+      </div>
+
+      <img *ngIf="!this.businessdata.image" (click)="openImage('', 'open')"  src="https://firebasestorage.googleapis.com/v0/b/step-drive-95bbe.appspot.com/o/1.png?alt=media&token=c023a9e6-a7a0-4af9-bd13-9778f2bea46d" class="thumbavatar">
+      <img *ngIf="this.businessdata.image" (click)="openImage(businessdata.image, 'open')"  src="{{this.businessdata.image}}" class="thumbavatar" >
+    </div>
+​
+    <div class="profile-form">
+​
+        <!-- <div class="input"> -->
+        <!-- <p>Description</p> -->
+​
+      <div class="input">
+        <p>Address</p>
+        <input #autocomplete  id="autocomplete"
+        placeholder="Enter your address"
+        (onFocus)="geolocate()" type="text" [(ngModel)]="businessdata.address">
+      </div>
+
+      <!-- <div id="locationField">
+        <input id="autocomplete"
+               placeholder="Enter your address"
+               (onFocus)="geolocate()"
+               type="text"/>
+      </div>
+           -->
+          <!-- <ion-list [hidden]="autocompleteItems.length == 0">
+            <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+              {{ item.description }}
+            </ion-item>
+          </ion-list> -->
+​
+​
+      <form [formGroup]="loginForm">
+      <div class="progress">
+        <ion-progress-bar *ngIf="isuploading" color="secondary" value="{{uploadprogress}}"></ion-progress-bar>
+      </div>
+      
+​
+     
+​
+​
+      <div class="input">
+        <p>SchoolName</p>
+        <input type="text" formControlName="schoolname" [(ngModel)]="businessdata.schoolname">
+      </div>
+
+      <div class="error" *ngFor="let validate of validation_messages.schoolname">
+        <div class="messages"
+          *ngIf="loginForm.get('schoolname').hasError(validate.type) && (loginForm.get('schoolname').dirty || loginForm.get('schoolname').touched)">
+          {{validate.message}}
+        </div>
+      </div>
+​
+
+      <div class="input">
+        <p>Email</p>
+        <input type="email" formControlName="email" [(ngModel)]="businessdata.email">
+      </div>
+​
+      <div class="error" *ngFor="let validate of validation_messages.email">
+        <div class="messages"
+          *ngIf="loginForm.get('email').hasError(validate.type) && (loginForm.get('email').dirty || loginForm.get('email').touched)">
+          {{validate.message}}
+        </div>
+      </div>
+​
+
+      <div class="input">
+        <p>CellNumber</p>
+        <input type="tel" formControlName="cellnumber" [(ngModel)]="businessdata.cellnumber">
+      </div>
+​
+      <div class="error" *ngFor="let validate of validation_messages.cellnumber">
+        <div class="messages"
+          *ngIf="loginForm.get('cellnumber').hasError(validate.type) && (loginForm.get('cellnumber').dirty || loginForm.get('cellnumber').touched)">
+          {{validate.message}}
+        </div>
+      </div>
+
+
+      <div class="input">
+        <p>Cost</p>
+        <input type="tel" formControlName="cost" [(ngModel)]="businessdata.cost">
+      </div>
+      <div class="error" *ngFor="let validate of validation_messages.cost">
+        <div class="messages"
+          *ngIf="loginForm.get('cost').hasError(validate.type) && (loginForm.get('cost').dirty || loginForm.get('cost').touched)">
+          {{validate.message}}
+        </div>
+      </div>
+​
+​
+​
+      <!-- <div class="input">
+        <p>Address</p>
+        <input type="cost" formControlName="address" [(ngModel)]="businessdata.address">
+      </div> -->
+​
+      <div class="error" *ngFor="let validate of validation_messages.content">
+        <div class="messages"
+          *ngIf="loginForm.get('address').hasError(validate.type) && (loginForm.get('address').dirty || loginForm.get('address').touched)">
+          {{validate.message}}
+        </div>
+      </div>
+      <div class="input">
+        <p>Description</p>
+        <input type="text" formControlName="desc" [(ngModel)]="businessdata.desc">
+      </div>
+​
+      <div class="error" *ngFor="let validate of validation_messages.schoolname">
+        <div class="messages"
+          *ngIf="loginForm.get('desc').hasError(validate.type) && (loginForm.get('desc').dirty || loginForm.get('desc').touched)">
+          {{validate.message}}
+        </div>
+      </div>
+​
+      <div class="time">
+        <ion-item>
+          <ion-label position="floating">open time</ion-label>
+          <ion-datetime displayFormat="HH:mm" formControlName="open" [(ngModel)]="businessdata.open"></ion-datetime>
+        </ion-item>
+        <div class="error" *ngFor="let validate of validation_messages.open">
+          <div class="messages"
+            *ngIf="loginForm.get('open').hasError(validate.type) && (loginForm.get('open').dirty || loginForm.get('open').touched)">
+            {{validate.message}}
+          </div>
+        </div>
+​
+        <ion-item>
+          <ion-label position="floating">closing Time</ion-label>
+          <ion-datetime displayFormat="HH:mm" formControlName="closed" [(ngModel)]="businessdata.closed">
+          </ion-datetime>
+        </ion-item>
+        <div class="error" *ngFor="let validate of validation_messages.closed">
+          <div class="messages"
+            *ngIf="loginForm.get('closed').hasError(validate.type) && (loginForm.get('closed').dirty || loginForm.get('closed').touched)">
+            {{validate.message}}
+          </div>
+        </div>
+      </div>
+​
+    </form>
+​
+    <div class="pack">
+        <h2 text-center>
+          Instructor Package.
+        </h2>
+      </div>
+​
+      <div class="packs">
+          <div class="inp" #inputs>
+              <div class="input">
+                  <p>Code</p>
+                  <input *ngIf="businessdata.packages.length<4" type="text" [(ngModel)]="code">
+                  <input *ngIf="businessdata.packages.length==4" disabled="true" type="text">
+                </div>
+            <div class="input">
+              <p>Package name</p>
+              <input *ngIf="businessdata.packages.length<4" type="text" [(ngModel)]="name">
+              <input *ngIf="businessdata.packages.length==4" disabled="true" type="text">
+
+            </div>
+
+            <div class="input">
+              <p>Amount</p>
+              <input *ngIf="businessdata.packages.length<4" type="text" [(ngModel)]="amount">
+              <input *ngIf="businessdata.packages.length==4" type="text" disabled="true">
+            </div>
+
+            <div class="input">
+              <p>Number</p>
+              <input *ngIf="businessdata.packages.length<4" type="text" [(ngModel)]="number">
+              <input *ngIf="businessdata.packages.length==4" disabled="true" type="text">
+            </div>
+
+            <button size="small"  *ngIf="businessdata.packages.length<3"  (click)="addPack()" >
+              Add Package
+            </button>
+​
+            <button size="small" *ngIf="businessdata.packages.length==3" (click)="addPack()" >
+                Add Package
+              </button>
+            
+          </div>
+          
+          <div class="s-packs">
+
+            <div>
+              <p text-center *ngIf="!businessdata.packages[0]"><strong>No packages yet</strong></p>
+              <div class="pack-l" *ngFor="let p of businessdata.packages; let i = index" (click)="editpack(p)">
+                <p *ngIf="p.code"><b>{{p.code}}</b></p>
+                <p *ngIf="p.name"><b>{{p.name}}</b></p>
+                <p *ngIf="p.number"> {{p.number}} Lessons R{{p.amount}}.00</p>
+                <div class="dele" (click)="deletepack(i)">
+                  <p>x</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+​
+    <div *ngIf="showButton" class="dbtn">
+        <button (click)="createMyAccount(loginForm)">
+          {{textInButton}}
+        </button>
+    </div>
+
+    <div  *ngIf="showButton1" class="dbtn">
+      <button (click)="updateMyAccount(loginForm)">
+        {{textInButton}}
+      </button>
+  </div>
+
+    </div>
+
+</div>
+</ion-content>

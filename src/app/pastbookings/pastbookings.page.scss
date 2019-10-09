@@ -1,0 +1,144 @@
+.container{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background:linear-gradient(rgba(255, 255, 255, 0.925)),url(../../assets/coverbg.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+      .DeleteButton{
+            border-radius: 10px;
+            color: #790B0B;
+            width: 200px;
+            margin-top: 10px;
+      }
+      .title{
+            width: 100%;
+            height: 10%;
+            text-align: center;
+            padding: 10px 0px;
+            display: grid;
+            align-content: center;
+            h1 {
+                  font-size: 5vw;
+                  margin: 0;
+                  padding: 0;
+            }
+      }
+      .list{
+            opacity: 1;
+            width: 100%;
+            height: 90%;
+            overflow-y: auto;
+            
+            padding-bottom: 10px;
+            .profile{
+                  width: 80%;
+                  margin: 10px auto;
+                  display: flex;
+                  background: white;
+                  position: relative;
+                  border-radius: 20px;
+                  box-shadow: 0px 0px 3px #1717179f;
+                  padding-left: 15vw;
+                  color: black;
+                  .image{
+                        position: absolute;
+                              width: 20vw;
+                              height: 100%;
+                              left: -6vw;
+                              top: 0;
+                              bottom: 0;
+                              display: grid;
+                              align-content: center;
+                        .img{
+                              width: 20vw;
+                              height: 20vw;
+                              background: rgb(255, 255, 255);
+                              display: grid;
+                              align-items: center;
+                              text-align: center;
+                              overflow: hidden;
+                              border-radius: 200px;
+                              box-shadow: 0px 0px 3px #1717179f;
+                              img{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                              }
+                        }
+                  }
+                  .details{
+                        padding: 5vw 0vw;
+                        position: relative;
+                        .takeme{
+                              position: absolute;
+                              top: 90%;
+                              right: 0% !important;
+                              button{
+                                    border-radius: 20px;
+                                    width: 200px;
+                                    // padding: 10px;
+                                    color: white;
+                                    height: 6vw;
+                                    background: linear-gradient(#790B0B,#4C0A0A);
+                              }
+                        }
+                        #address {
+                              margin: 5px 0px;
+                        }
+                        h4{
+                              font-size: 4vw;
+                              margin: 0;
+                        }
+                        p {
+                              font-size: 3vw;
+                              margin: 0;
+                        }
+                  }
+                  .expand{
+                        position: absolute;
+                        width: 30px;
+                        height: 30px;
+                        right: 0;
+                        text-align: center;
+                        top: 25%;
+                        right: -15px;
+                        border-radius: 200px;
+                        background: white;
+                        box-shadow: 0px 0px 3px #1717179f;
+                        display: grid;
+                        padding-top: 3px;
+                        align-content: center;
+                        p{
+                              margin: 0;
+                              padding: 0;
+                        }
+                  }
+                  .buttons{
+                        position: absolute;
+                        bottom: -10px;
+                        left: 0;
+                        right: 0;
+                        text-align: right;
+                        padding: 0px 10px;
+                        button {
+                              padding:5px 10px;
+                              margin: 0px 5px;
+                              border-radius: 5px;
+                              width: 20vw;
+                              height: 4vw;
+                              font-size: 2vw;
+                        }
+                        #accept{
+                              background: white;
+                              box-shadow: 0px 0px 3px #1717179f;
+                        }
+                        #decline{
+                              background: #4C0A0A;
+                              box-shadow: 0px 0px 3px #1717179f;
+                              color: white;
+                        }
+                  }
+            }
+      }
+}

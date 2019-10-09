@@ -1,0 +1,95 @@
+.no-scroll .scroll-content{
+    overflow: hidden;
+  }
+  .container {
+      display: flex;
+      flex-direction: column;
+      top: 0;
+      position: absolute;
+      width: 100%;
+      background-size: cover;
+      height: auto;
+      // width: 100%;
+      .avatar-images {
+        width: 100%;
+        height: 30vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            height: 22.5vh;
+            width: 100%;
+            background: linear-gradient(to left,#4C0A0A, #790B0B);
+        }
+  
+  
+  
+        .thumbavatar {
+            position: relative;
+            width: 15vh;
+            height: 15vh;
+            border: 4px solid rgb(255, 255, 255);
+            border-radius: 50%;
+            object-fit: cover;
+           /*  margin-left: -50px;
+            left: 50%;
+            bottom: 0%;
+            margin-bottom: 0px; */
+          
+        }
+        .name > h4 {
+            position: relative;
+            text-align: center;
+        }
+       
+    }
+      .inputs {
+          // height: 70%;
+      }
+      .btn {
+          display: flex;
+          justify-content: center;
+          ion-button {
+              width: 80%;
+          }
+      }
+      .item.item-trns {
+          background: rgba(226, 223, 223, 0) !important;
+      }
+      ion-list {
+          background: transparent;
+      }
+
+      .input{
+        text-align: center;
+        width: 100%;
+        position: relative;
+        margin: 20px 0px;
+        p{
+          font-size: 80%;
+          background: linear-gradient(#4C0A0A,#790B0B);
+          color: white;
+          width: 25%;
+          padding: 2px;
+          border-radius: 200px;
+          position: absolute;
+          top: -9px;
+          left: 20px;
+          margin: 0;
+        }
+        input{
+          width: 97%;
+          padding: 15px 10px;
+          border: none;
+          border: solid 1px #4C0A0A;
+          background: none;
+          color: #4C0A0A;
+          border-radius: 200px;
+        }
+      }
+  
+  }

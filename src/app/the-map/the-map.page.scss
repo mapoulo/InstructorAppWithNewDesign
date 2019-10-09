@@ -1,0 +1,196 @@
+.viewImage {
+  transition: 0.4s;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  display: grid;
+  text-align: center;
+  align-content: center;
+  background: rgba(0, 0, 0, 0.692);
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    border-radius: 100px;
+    align-content: center;
+    p {
+      font-size: 13px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  img {
+    margin: auto;
+    width: 90%;
+    border-radius: 10px;
+  }
+}
+ion-toolbar {
+    --background: rgb(76, 10, 10);
+    --ion-color-base: transparent !important;
+ }
+#map {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 7;
+
+}
+.Icon{
+  float: right;
+  font-size: 30px;
+  border-radius: 10px;
+}
+
+ .profile{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        z-index: 8;
+        top: 0.5%;
+        ion-thumbnail {
+        }
+        img {
+            border-radius:100%; 
+        }
+    }
+    .listinactive {
+        z-index: 8;
+        transition: 0.4s;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 80vh;
+        z-index: 8;
+        background: rgba(255, 255, 255, 0.753);
+        overflow: hidden;
+        .toggler {
+          width: 100%;
+          height: 20px;
+          text-align: center;
+        }
+        .s-list{
+        z-index: 8;
+          display: none;
+          width: 100%;
+          height: 95%;
+          background: teal;
+          overflow-y: auto;
+          .card {
+            display: flex;
+            width: 95%;
+            height: 100px;
+            margin: 10px auto;
+            background: linear-gradient(#FFFFFF, #FEFEFE, #F0F0F0,#EEEEEE);
+            display: flex;
+            border-radius: 10px;
+            box-shadow: 0px 3px 2px #00000016;
+            .image{
+                z-index: 8;
+              border-radius: 10px;
+              overflow: hidden;
+              max-width: 30%;
+              min-width: 30%;
+              height: 100%;
+              background: red;
+              img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+            .details {
+              padding: 0px 10px;
+              z-index: 8;
+            }
+          }
+        }
+      }
+      .list {
+        transition: 0.4s;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 10vh;
+        z-index: 8;
+        background: linear-gradient(to left,#c31432,#240b36);
+        overflow: hidden;
+        .toggler {
+          width: 100%;
+          height: 25px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+        }
+        .s-list{
+          display: block;
+          width: 100%;
+          height: 97%;
+          background: rgba(255, 255, 255, 0.925);
+          overflow-y: auto;
+          .card {
+            width: 95%;
+            height: 100px;
+            margin: 25px auto;
+            background: linear-gradient(#c31432,#240b36);
+            display: flex;
+            border-radius: 10px;
+            box-shadow: 0px 3px 2px #00000016;
+            position: relative;
+            z-index: 8;
+            .call {
+                position: absolute;
+                bottom: -20%;
+                right: 7px;
+                button {
+                    background: #790B0B;
+                    color: white;
+                    border-radius: 5px;
+                    height: 20px;
+                }
+            }
+            .request{
+              position: absolute;
+              bottom: -18%;
+              right: 75px;
+              button {
+                  background: white;
+                  border-radius: 5px;
+                  color: #790B0B;
+                  height: 20px;
+              }
+            }
+            .image{
+              border-radius: 10px;
+              overflow: hidden;
+              max-width: 30%;
+              min-width: 30%;
+              height: 100%;
+              // background: red;
+              padding: 0 !important;
+              z-index: 8;
+              img{
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover;
+                margin: 0;
+                z-index: 8;
+              }
+            }
+            .details {
+              padding: 0px 10px;
+            }
+          }
+        }
+      }
